@@ -1,0 +1,14 @@
+.quiz1 {
+  width: 210px;
+  background-color: black;
+  color: white;
+  text-align: left;
+}
+ul {
+  list-style-type: none;
+  padding-top: 30px;
+}
+li {
+  font-weight: bold;
+  color: blue;
+}
