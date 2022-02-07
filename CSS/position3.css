@@ -1,0 +1,21 @@
+img {
+  width: 500px;
+  height: 500px;
+  border-radius: 250px;
+  border: 1px solid #ccc;
+  box-shadow: 5px 5px 30px 2px #000;
+}
+
+.puppy {
+  width: 600px;
+  margin: 20px;
+  padding: 20px 20px 60px 20px;
+  border: 1px dashed;
+}
+article {
+  width: 350px;
+  height: 200px;
+  margin: 10px;
+  padding: 10px;
+  float: left;
+}
