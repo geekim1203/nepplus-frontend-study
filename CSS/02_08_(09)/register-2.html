@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: gray;
+      }
+      #container {
+        width: 400px;
+        background-color: white;
+        padding: 15px;
+        border: 2px solid;
+        border-radius: 4px;
+      }
+
+      fieldset + fieldset {
+        margin-top: 30px;
+
+        margin: 20px auto;
+        padding: 20px;
+      }
+      #last-fieldset {
+        padding: 0;
+        text-align: center;
+      }
+      #last-fieldset > input {
+        border-radius: 20px;
+        padding: 5px 20px;
+      }
+      div {
+        margin: 20px;
+      }
+      #submit {
+        border: 1px solid;
+        margin: 0 auto;
+        text-align: center;
+      }
+      #container label {
+        float: left;
+        font-size: 13px;
+        width: 110px;
+      }
+
+      #container input[readonly] {
+        border: none;
+      }
+      #container input[type="text"],
+      #container input[type="password"],
+      #container input[type="tel"],
+      #container input[type="email"] {
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-size: 13px;
+        padding: 5px;
+        width: 180px;
+      }
+      #container input[required] {
+        border: 1px red solid;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <form>
+        <fieldset id="login">
+          <legend><h3>로그인 정보</h3></legend>
+
+          <div class="id">
+            <label for="user_id">아이디</label>
+            <input type="text" id="user_id" autofocus required />
+          </div>
+
+          <div class="pw">
+            <label for="user_pw">비밀번호</label>
+            <input type="password" id="user_pw" required />
+          </div>
+
+          <div class="pw_check">
+            <label for="user_pw2">비밀번호 확인</label>
+            <input type="password" id="user_pw2" required />
+          </div>
+
+          <div class="level">
+            <label for="user_level">회원 등급</label>
+            <input type="text" id="user_level" readonly value="준회원" />
+          </div>
+        </fieldset>
+
+        <fieldset id="public">
+          <legend><h3>개인 정보</h3></legend>
+
+          <div class="name">
+            <label for="user_name">이름</label>
+            <input
+              type="text"
+              id="user_name"
+              placeholder="5자미만 공백없이"
+              required
+            />
+          </div>
+
+          <div class="mail">
+            <label for="user_mail">메일주소</label>
+            <input
+              type="email"
+              id="user_mail"
+              placeholder="abcd@domain.com"
+              required
+            />
+          </div>
+
+          <div class="phone">
+            <label for="user_tel">연락처</label>
+            <input type="tel" id="user_tel" />
+          </div>
+        </fieldset>
+        <fieldset id="last-fieldset">
+          <input type="submit" />
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>

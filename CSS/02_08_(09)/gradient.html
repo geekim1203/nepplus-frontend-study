@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .grad {
+        width: 400px;
+        height: 300px;
+        border: 1px solid magenta;
+        margin: 20px;
+      }
+      .radi {
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+      }
+      #grad1 {
+        background: blue;
+        background: linear-gradient(to right bottom, blue, magenta);
+      }
+      #grad2 {
+        background: red;
+        background: linear-gradient(45deg, yellow, magenta);
+      }
+      #grad3 {
+        background: cyan;
+        background: linear-gradient(to bottom, #06f, white 30%, #05f);
+      }
+      #grad4 {
+        background: cyan;
+        background: radial-gradient(red, yellow, blue);
+      }
+      #grad5 {
+        background: cyan;
+        background: radial-gradient(circle, red, white 70%, yellow);
+      }
+      #grad6 {
+        background: purple;
+        background: radial-gradient(circle at 20% 20%, white, purple);
+      }
+      #grad7 {
+        background: cyan;
+        background: repeating-linear-gradient(white, blue 20px);
+      }
+      #grad8 {
+        background: cyan;
+        background: repeating-radial-gradient(
+          circle,
+          white,
+          white 20px,
+          blue 20px,
+          blue 40px
+        );
+      }
+      #grad9 {
+        background: cyan;
+        background: repeating-linear-gradient(
+          yellow,
+          yellow 20px,
+          blue 20px,
+          blue 40px
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grad" id="grad1"></div>
+    <div class="grad" id="grad2"></div>
+    <div class="grad" id="grad3"></div>
+    <div class="grad" id="grad4"></div>
+    <div class="grad" id="grad5"></div>
+    <div class="radi" id="grad6"></div>
+    <div class="grad" id="grad7"></div>
+    <div class="grad" id="grad8"></div>
+    <div class="grad" id="grad9"></div>
+  </body>
+</html>
