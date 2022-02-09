@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      li img {
+        width: 300px;
+        height: 300px;
+      }
+      #container h1 {
+        text-align: center;
+      }
+
+      .prod-list .caption {
+        opacity: 0;
+        width: 300px;
+        height: 300px;
+        text-align: center;
+        background-color: #fff;
+        background: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 300px;
+        left: 0;
+        transition: all 0.6s ease-in-out;
+        color: #fff;
+      }
+      .prod-list li {
+        position: relative;
+        display: inline-block;
+        overflow: hidden; /* li 벗어나는 자식 요소는 보이지 않게 됨 */
+      }
+      .prod-list li:hover .caption {
+        transform: translateY(-300px);
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>신상품 목록</h1>
+      <ul class="prod-list">
+        <li>
+          <img
+            src="https://m.media-amazon.com/images/I/71E5zB1qbIL._SL1500_.jpg"
+          />
+          <div class="caption">
+            <h2>상품 1</h2>
+            <p>상품 1 설명 텍스트</p>
+            <p>가격 : 12,345원</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MX472_AV4?wid=2000&hei=2000&fmt=jpeg&qlt=95&.v=1570119352353"
+          />
+          <div class="caption">
+            <h2>상품 2</h2>
+            <p>상품 2 설명 텍스트</p>
+            <p>가격 : 12,345원</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://andmac-e.com/store/449-thickbox_default/apple-watch-series-7-41mm-productred-aluminum-case-with-sport-band.jpg"
+          />
+          <div class="caption">
+            <h2>상품 3</h2>
+            <p>상품 3 설명 텍스트</p>
+            <p>가격 : 12,345원</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

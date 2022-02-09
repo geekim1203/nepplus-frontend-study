@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+    #container {
+        width: 400px;
+        margin: 20px auto;
+        border: 2px solid;
+        border-radius: 3px;
+        padding: 20px;
+    }
+    fieldset {
+        padding: 20px;         
+        margin-bottom: 30px;
+    }
+    #container label {
+        display: inline-block;
+        min-width: 60px;
+    }
+    /* 앞에 register 예시에는 float:left해서 laber정렬함 
+    비교 ㄱㄱ */
+
+    #container ul li {
+        margin: 30px 0;
+    }
+    #reserv {
+        margin: 20px;
+     
+        font-size: 0.8em;
+    }
+    #container input:checked + label {
+        color: red;
+        font-weight: bold;
+    }
+   ul {
+       list-style-type: none;
+   }
+   #container input[type="submit"] {
+       display: block;
+       border-radius: 20px;
+       padding: 5px 20px;
+       margin: 0 auto;
+       text-align: center;
+   }
+    /* 이부분 다시 확인  
+   #container input[type=text],
+   #cintainer input[type=tel] {
+       border: 1px solid #ccc;
+       border-radius: 3px;
+       padding: 5px;
+       width: 200px;
+   }
+   */
+
+
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <form>
+        <fieldset>
+          <legend>개인 정보</legend>
+          <ul>
+              <li>
+                <label for="name">이름</label>
+                <input type="text" id="name" /> 
+              </li>
+              <li>
+                <label for="tel">연락처</label>
+                <input type="tel" id="tel" />
+              </li>
+          </ul>
+          
+      
+        </fieldset>
+
+        <fieldset>
+          <legend>객실 형태</legend>
+          <div id="reserv">
+              <ul>
+                <li>
+             <input type="radio" id="basic" name="room" checked/>
+             <label for="basic">기본형(최대2인)</label>
+                </li>
+          </div>
+          <div id="reserv">
+            <ul>
+                <li>
+            <input type="radio" id="fam" name="room"/><label for="fam"
+            >가족형(최대
+              8인)</label>
+              
+          
+        </li>
+        </ul>
+         </fieldset>
+       
+          <input type="submit" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

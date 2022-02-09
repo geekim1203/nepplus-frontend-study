@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .origin {
+        width: 300px;
+        height: 300px;
+        border: 1px solid;
+        display: inline-block;
+        margin: 20px;
+
+        perspective: 200px;
+      }
+      .origin > div {
+        transition: all 3s;
+        width: 300px;
+        height: 300px;
+        background-color: orange;
+      }
+      #rotatex:hover {
+        transform: rotateX(55deg);
+      }
+      #rotatey:hover {
+        transform: rotateY(55deg);
+      }
+      #rotatez:hover {
+        transform: rotatez(55deg);
+      }
+      #rotatexyz:hover {
+        transform: rotate3d(2.5, 1.2, -1.5, 55deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="origin">
+      <div id="rotatex"></div>
+    </div>
+    <div class="origin">
+      <div id="rotatey"></div>
+    </div>
+    <div class="origin">
+      <div id="rotatez"></div>
+    </div>
+    <div class="origin">
+      <div id="rotatexyz"></div>
+    </div>
+  </body>
+</html>

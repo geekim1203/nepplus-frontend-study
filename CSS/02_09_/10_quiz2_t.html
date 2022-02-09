@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #quiz2 ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        width: 600px;
+        box-shadow: 0px 2px 10px 0px;
+        /* display:flex 쓰면 바로 가로로 정렬됨 */
+      }
+      #quiz2 ul li {
+        background-color: lightgray;
+        width: 95px;
+        padding: 5px 0;
+        text-align: center;
+        display: inline-block;
+        /* li사이 공백은 li 사이 공백 있는거 */
+        cursor: pointer;
+        transition: 0.5s ease-in;
+      }
+      /* #menu6 { 
+        border-right: none !important;
+      }*/
+      #quiz2 ul li:not(#menu6) {
+        border-right: 1px solid;
+      }
+      #quiz2 ul li:not(#menu6):hover {
+        background-color: #555;
+        color: #fff;
+      }
+      /* #quiz2 ul li:not(:last-child) {
+        border-right: 1px solid;
+      } 이렇게해도 됨 */
+
+      #menu6:hover {
+        background-color: #b30000;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="quiz2">
+      <ul>
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+        <li>메뉴5</li>
+        <li id="menu6">메뉴6</li>
+      </ul>
+    </section>
+  </body>
+</html>
