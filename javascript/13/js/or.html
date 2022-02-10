@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>or</title>
+  </head>
+  <body>
+    <script>
+      var NumberOne = prompt("50 미만인 숫자를 입력하세요.");
+      var NumberTwo = prompt("50 미만인 숫자를 입력하세요.");
+
+      if (NumberOne < 10 || NumberTwo < 10)
+        alert("숫자 2개 중에서 최소한 하나는 10 미만입니다.");
+      else alert("숫자 2개 중에서 10 미만인 수가 없습니다.");
+      //   ||(or 연산자) : 둘 중 하나라도 true 값이 있다면 결과는 true
+      //   one, two 중에서 10보다 작은 숫자가 있다면 true(alert1) 없다면 false(alert2)
+    </script>
+  </body>
+</html>

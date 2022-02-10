@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>switch</title>
+  </head>
+  <body>
+    <script>
+      var session = prompt(
+        "관심 세션을 선택해 주세요. 1-마케팅, 2-개발, 3-디자인"
+      );
+
+      switch (session) {
+        case "1":
+          document.write(
+            "<p>마케팅 세션은 <strong>201호</strong>에서 진행됩니다.</p>"
+          );
+          break;
+        case "2":
+          document.write(
+            "<p>개발 세션은 <strong>203호</strong>에서 진행됩니다.</p>"
+          );
+          break;
+        case "3":
+          document.write(
+            "<p>디자인 세션은 <strong>205호</strong>에서 진행됩니다.</p>"
+          );
+          break;
+        default:
+          alert("잘못 입력했습니다."); //   1, 2, 3 이 아닌 갓을 입력받으면 출력
+      }
+      //   case "": "" 안에 할당한 값을 입력해야 함. ex)case"1" 일때 prompt안에 1- 마케팅 이라고 입력할 시 default alert나옴
+      //   case의 값1 과 일치하면  명령1을 실행하고 다음 break를 만나 switch 문을 빠져나옴
+      // 만약 일치하는 case 문이 없다면 마지막에 있는 default 문을 실행하는 것(break문 쓰지않음)
+      // 만약 break문이 없다면 break문을 만나기 전까지의 명령들이 실행되고 그 값이 전부 출력 됨. (의도하는 경우도 있음.)
+    </script>
+  </body>
+</html>

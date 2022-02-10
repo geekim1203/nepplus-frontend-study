@@ -1,0 +1,45 @@
+#container {
+  width: 700px;
+  /* height: 900px; */
+}
+#yearmonth h2 {
+  text-align: center;
+}
+#day div {
+  text-align: center;
+  border: 1px solid;
+  padding: 5px 0;
+  background-color: aliceblue;
+}
+#day {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: left;
+}
+
+#day-num {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  /* grid-template-rows: repeat(5, 1fr); */
+}
+#day-num div {
+  text-align: left;
+  height: 80px;
+  border: 1px solid;
+  padding: 5px 5px;
+}
+
+#next h4 {
+  display: inline-block !important;
+  color: gray;
+}
+.sun {
+  color: red;
+  border: 1px solid black !important;
+}
+.sat {
+  border: 1px solid black !important;
+  color: blue;
+}

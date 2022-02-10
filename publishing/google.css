@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+}
+ul {
+  display: flex;
+  list-style: none;
+  padding-left: 20px;
+}
+li {
+  margin: 10px;
+}
+li a {
+  text-decoration: none;
+  color: black;
+  font-size: 0.7em;
+  font-weight: 400;
+  margin: 0 10px 0 5px;
+}
+ul li:nth-child(3) {
+  background: url(https://www.pngrepo.com/png/10257/512/menu.png) no-repeat;
+  background-size: 18px 18px;
+}
