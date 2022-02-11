@@ -125,70 +125,7 @@ a:hover {
 #main .main-box-2 .search {
   width: 580px;
   height: 45px;
-  margin-top: 25px;
-  border-radius: 25px;
+  margin-top: 30px;
+  border-radius: 20px;
   border: 1px solid #ccc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#main .main-box-2 img {
-  margin: 10px;
-  width: 20px;
-  height: 20px;
-}
-#main .search-box {
-  display: flex;
-  align-items: center;
-}
-#main .search:hover {
-  cursor: text;
-  box-shadow: 2px 2px 5px 2px #ccc;
-  border: unset;
-}
-#main .search-box input {
-  width: 450px;
-  height: 35px;
-  border: unset;
-  outline: none;
-}
-#main .keyboard-icon {
-  display: flex;
-  align-items: center;
-}
-#main .keyboard-icon img {
-  width: 25px;
-  height: 25px;
-}
-#main .mic-icon img {
-  width: 16px;
-  height: 20px;
-  margin-right: 16px;
-}
-#main .button-box {
-  display: flex;
-
-  padding: 15px;
-  margin: 15px;
-}
-#main .button-box button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 120x;
-  height: 30px;
-  margin: 0px 10px 0px;
-  padding: 18px;
-  text-align: center;
-  background-color: #f8f9fa;
-  border: 1px solid #f8f9fa;
-  border-radius: 4px;
-  color: #3c4043;
-}
-#main .button-box button:hover {
-  border: 1px solid rgb(226, 226, 226);
-  box-shadow: 2px 2px 10px 2px 1;
-}
-#main .button-box button a {
-  text-decoration: none;
 }

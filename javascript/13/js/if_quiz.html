@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const answer = prompt("숫자를 입력해주세요.");
+      const number = +answer;
+      // //   answer앞에 +하면 문자형을 숫자형으로 바꿔줌
+      if (number === 0) {
+        alert("아무것도 아닙니다.");
+      } else if (number % 3 === 0 && number % 5 === 0) {
+        alert("3과 5의 배수입니다.");
+      } else if (number % 3 === 0) {
+        alert("3의 배수입니다.");
+      } else if (number % 5 === 0) {
+        alert("5의 배수입니다.");
+      } else {
+        alert("입력이 최소됐습니다.");
+      }
+    </script>
+  </body>
+</html>

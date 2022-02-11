@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //0점~100점 까지 점수있을 때
+      //90점 이상 : A
+      //80점~90점 : B
+      //70~80점 이상 : C
+      //70미만 F
+
+      //   const num = prompt("점수를 입력해주세요");
+      //   const number = +num;
+
+      //   switch(number) {
+
+      //   }
+      const num = prompt("점수를 입력해주세요");
+      const score = +num;
+      let score2 = score / 10;
+      score2 = parseInt(score2);
+
+      switch (score2) {
+        case 10:
+
+        case 9:
+          alert("A학점입니다.");
+          break;
+        case 8:
+          alert("B학점입니다.");
+          break;
+        case 7:
+          alert("C학점입니다.");
+          break;
+        default:
+          alert("F학점입니다.");
+          break;
+      }
+      //   switch 는 if문이라 다름 단지 case와 할당 한 값이 같은지 아닌지만 확인한다.
+    </script>
+  </body>
+</html>

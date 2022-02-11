@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //0점~100점 까지 점수있을 때
+      //90점 이상 : A
+      //80점~90점 : B
+      //70~80점 이상 : C
+      //70미만 F
+      const num = prompt("점수를 입력해주세요");
+      const number = +num;
+
+      if (number >= 90) {
+        alert("A학점입니다.");
+      } else if (number >= 80) {
+        //   위에서 90학점 애들은 A학점으로 나왔기 때문에 &&number < 90 필요없음
+        alert("B학점입니다.");
+      } else if (number >= 70) {
+        alert("C학점입니다.");
+      } else {
+        alert("F학점입니다.");
+        // if (number < 70)도 필요없음 여기가ㅣㅈ 왓으면 조건없이다 F
+      }
+    </script>
+  </body>
+</html>
