@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      for (let j = 1; j <= 5; j++) {
+        for (let i = 1; i <= 5; i++) {
+          document.write("*");
+        }
+        document.write("<br>");
+      }
+      document.write("<br>");
+      //   document.write("<br>");
+
+      // j 1로 시작하고 5보다 작거나 같을때까지 아래의 식을 실행한다
+      // i 1로 시작하는데 i가 5보다 작거나 같을 때 까지 별을 찍고 i에 1을 더한다
+      //계속 하다보면 i가 6이 될 때가 오는데 그럼 조건식에 부합하지 않음으로 false 찍고 밖의 식으로 나온다.
+      // 그럼 한 칸 띄고 다시 위로 올라가서 j ++ j=2로 해서 시작한다
+      // 위의 과정을 반복하다보면 j가 6이 되어 식을 타게 되는데 이는 첫번째 for문에서 false 이므로 식 밖으로 나와 <br>타고 다음으로 넘어간다.
+      for (let j = 1; j <= 5; j++) {
+        for (let i = 1; i <= j; i++) {
+          document.write("*");
+        }
+        document.write("<br>");
+      }
+      document.write("<br>");
+      //   document.write("<br>");
+      //j 1로 시작하고 5보다 작거나 같을때까지 아래의 식을 실행한다
+      // i 1로 시작하는데 i가 j보다 작거나 같을 때 까지 별을 찍고 i에 1을 더한다
+      // 처음 실행 시 j=1   i<=j를 하면 1=<1과 같다 그럼 i++하고 다시 돌아온다 근데 돌아오면 i=2가 되지만 해당 싸이클의 j는 아직 1이기 때문에 식에서 나와 돌아간다.
+      // 식을 돌고 다시 j++이 되면 j=2가 되고 밑의 식을 타면 i=1 , 1<=2 (i<=j)식이된다 해당 식에 맞춰서 별을 찍으면 **가 찍히고 i=3이 되면 더 이상 식을 돌릴 수 없기때문에 위처럼 나간다.
+      // 위 사이클의 반복
+
+      for (let j = 1; j <= 5; j++) {
+        for (let i = j; i <= 5; i++) {
+          document.write("*");
+        }
+        document.write("<br>");
+      }
+      document.write("<br>");
+      //   document.write("<br>");
+      //j 1로 시작하고 5보다 작거나 같을때까지 아래의 식을 실행한다
+      // i=j일때 i<=5이면 별을 찍고 i++한다 첫 사이클에서 j=1 고로 i=1 그래서 한개의 별이 찍히고 i++해서 i=2가 되면 2=1이 아니므로 식에서 나온다
+      // 다시 첫번째로 돌아오면 j=2 밑의 식을 타면 i=j 즉 i=2 i가2 이면 4개의 별이 찍힌다.
+      //위의 사이클을 돌면 완성
+    </script>
+  </body>
+</html>

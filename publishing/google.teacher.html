@@ -32,15 +32,84 @@
       </header>
 
       <main id="main">
-        <div class="main-box-1">
-          <img
-            src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
-          />
+        <div class="container">
+          <form action="https://www.google.com/search">
+            <img
+              class="img-logo"
+              src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+            />
+            <div class="search-container">
+              <img
+                src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_search-256.png"
+                class="img-search"
+              />
+              <input name="q" />
+
+              <div class="tooltip-wrapper">
+                <img
+                  src="https://cdn0.iconfinder.com/data/icons/zondicons/20/keyboard-512.png"
+                  class="img-keyboard"
+                />
+                <div class="tooltip">입력도구</div>
+              </div>
+
+              <div class="tooltip-wrapper2">
+                <img
+                  src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-25-256.png"
+                  class="img-mic"
+                />
+                <div class="tooltip2">음성검색</div>
+              </div>
+            </div>
+            <div class="button-container">
+              <button class="btn-search">Google 검색</button>
+              <a href="https://www.google.com/doodles"
+                ><button type="button" class="btn-lucky">
+                  <!-- Form 안에 button은 자동으로 submit인데 type=button이면 서브밋 안댐 -->
+                  I'm Feeling Lucky
+                </button></a
+              >
+            </div>
+            <p class="service-info">
+              Google 제공 서비스: <a href="#">English</a>
+            </p>
+            <ul class="tab-list">
+              <a href="#">
+                <li>
+                  <div class="icon-wrapper">
+                    <img
+                      class="img-icon"
+                      src="https://mir-s3-cdn-cf.behance.net/user/276/a78c6531673609.5703570bc812f.png"
+                    />
+                  </div>
+                  <span class="tab-name">Naver</span>
+                </li>
+              </a>
+              <a href="#"
+                ><li>
+                  <div class="icon-wrapper">
+                    <img
+                      class="img-icon"
+                      src="https://mir-s3-cdn-cf.behance.net/user/276/a78c6531673609.5703570bc812f.png"
+                    />
+                  </div>
+                  <span class="tab-name">Daum</span>
+                </li></a
+              >
+              <a href="#"
+                ><li>
+                  <div class="icon-wrapper">
+                    <img
+                      class="img-icon"
+                      src="https://mir-s3-cdn-cf.behance.net/user/276/a78c6531673609.5703570bc812f.png"
+                    />
+                  </div>
+                  <span class="tab-name">Youtube</span>
+                </li></a
+              >
+            </ul>
+          </form>
         </div>
-        <div class="main-box-2">
-          <div class="search"></div>
-        </div>
-        <div></div>
       </main>
 
       <footer id="footer">
