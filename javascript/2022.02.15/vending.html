@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        list-style-type: none;
+        display: flex;
+      }
+      img {
+        width: 100px;
+        height: 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="charger">
+        <h2>코인 넣기</h2>
+        <ul>
+          <li>
+            <button id="button1" onclick="insertcoin(100)">100원</button>
+          </li>
+          <li>
+            <button id="buy" onclick="insertcoin(1000)">1000원</button>
+          </li>
+          <li>
+            <button id="buy" onclick="insertcoin(5000)">5000원</button>
+          </li>
+          <li>
+            <button id="buy" onclick="insertcoin(10000)">10000원</button>
+          </li>
+          <li>
+            <button id="buy" onclick="insertcoin(50000)">50000원</button>
+          </li>
+          <li>
+            <p>현재금액 : <span id="total-money">0</span>원</p>
+          </li>
+        </ul>
+      </div>
+
+      <div id="buy-button">
+        <h2>사먹기</h2>
+        <ul>
+          <li>
+            <img
+              src="https://zemaas-static-content.s3.ca-central-1.amazonaws.com/images/uploads/R_(6).jpg"
+            />
+            <button class="buy" onclick="buy(100)">100원</button>
+          </li>
+          <li>
+            <button class="buy" onclick="buy(1000)">1000원</button>
+          </li>
+          <li>
+            <button class="buy" onclick="buy(5000)">5000원</button>
+          </li>
+          <li>
+            <button class="buy" onclick="buy(10000)">10000원</button>
+          </li>
+          <li>
+            <button class="buy" onclick="buy(50000)">50000원</button>
+          </li>
+        </ul>
+      </div>
+      <button id="pay-back">잔돈반환</button>
+    </div>
+
+    <script>
+      // 1.버튼리스트 만들기
+      // 2. 버튼을 누르면 insertCoin함수 실행
+      // 3. 버튼마다 증가하는 돈이 다름
+      // 4. insertcoin 함수 : 매개변수만큼 totalMoney를 증가시키고
+      // 5.totalMoney르르 console.log
+
+      let totalMoney = 0;
+      const insertcoin = (money) => {
+        totalMoney += money;
+        console.log(totalMoney);
+        document.querySelector("#total-money").innerHTML = totalMoney;
+      }; // 웹 요소에 직접 함수 적용
+
+      const buy = (money) => {
+        if (totalMoney >= money) {
+          totalMoney -= money;
+          console.log(totalMoney);
+          document.querySelector("#total-money").innerHTML = totalMoney;
+        } else if (totalMoney < money) alert("잔액부족");
+      };
+
+      // document.querySelector("button")=function() {
+      //   console.log((totalMoney += money));
+      // };
+
+      //   document.querySelector("#total-money").innnerHTML = totalMoney;
+
+      //   거스름돈 반환하면 소지금액 0원  document.querySelector("#total-money").innerHTML = totalMoney;이거 만들어서 하기 어디 넣지말고
+      // 이벤트가 일어날때 이ㅂ[ㅔㄴ트에 대한 안내메세지 ㅍ사]
+    </script>
+  </body>
+</html>

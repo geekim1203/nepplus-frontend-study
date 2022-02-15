@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const num1 = parseInt(prompt("첫번째 숫자"));
+      const num2 = parseInt(prompt("두번째 숫자"));
+      //   parseInt 붙여야 console창에서 실행해줌 문자열로
+
+      //   const sumMulti = (a, b) => {
+      //     if (a === b) {
+      //       console.log(a * b);
+      //     } else {
+      //       console.log(a * b);
+      //     }
+      //   };
+
+      //   sumMulti(+num1, +num2);
+      //   by-teacher
+
+      // 여기는 내가 짬
+      function sumMulti(x, y) {
+        if (x === y) {
+          sum = x * y;
+          console.log(sum);
+        } else if (x !== y) {
+          //else if에서 if 빼버리기
+          sum1 = x + y;
+          console.log(sum1);
+        }
+      }
+      sumMulti(num1, num2);
+    </script>
+  </body>
+</html>

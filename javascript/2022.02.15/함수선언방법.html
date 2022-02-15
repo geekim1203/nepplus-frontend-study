@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 함수표현식 : 변수 선언을 해줘야함0000
+      const minusNumber = function (a, b) {
+        alert(a, b);
+      };
+      //화살표 함수: 위의 함수 표현식과 같음. 위에꺼를 줄인 것 function 안씀.
+      const minusNumber = (a, b) => {
+        alert(a, b);
+      };
+      const minusNumber = (a, b) => alert(a, b);
+      const hi = () => {
+        return "hi";
+      };
+
+      () => {}; //익명 함수\
+      const hi = () => "hi "; //함수 선억식
+
+      // 함수 선언식 : 호이스팅 됨.
+      function minusNumber(a, b) {
+        alert(a, b);
+      }
+    </script>
+  </body>
+</html>
