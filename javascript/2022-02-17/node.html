@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="addP()">더 보기</button>
+    <div id="info"></div>
+    <script>
+      const addP = () => {
+        const newP = document.createElement("p");
+        const txtNode = document.createTextNode(
+          "Dom은 document object model의 줄임말입니다."
+        );
+        newP.appendChild(txtNode);
+        // newP.innerText = "Dom은 document object model의 줄임말입니다.";
+
+        document.getElementById("info").appendChild(newP);
+      };
+      const addImg = () => {
+        const newImg = dociment.createElement("img");
+        newImg.src =
+          "https://www.timeoutdubai.com/cloud/timeoutdubai/2021/09/12/CVgukL2V-things-to-do-1200x800.jpg";
+
+        document.getElementById("info").appendChild(newIng);
+      };
+
+      const removeImg = () => {
+        document.st;
+      };
+    </script>
+  </body>
+</html>

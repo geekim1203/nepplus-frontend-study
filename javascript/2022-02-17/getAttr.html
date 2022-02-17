@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .img-thumbnail {
+        width: 80px;
+        height: 80px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="prod-pic">
+      <img
+        src="https://blog.kakaocdn.net/dn/bslhEF/btrkQksns4I/qxv5FFUFKiBj9ER37nMmr1/img.jpg"
+        alt="에디오피아 게뎁"
+        id="cup"
+        width="200"
+        height="200"
+        onclick="displaySrc()"
+      />
+    </div>
+    <div class="thumbnail-list">
+      <img
+        class="img-thumbnail"
+        src="https://t1.daumcdn.net/cfile/tistory/2375D64356F55B1C13"
+      />
+      <img
+        class="img-thumbnail"
+        src="http://res.heraldm.com/phpwas/restmb_idxmake.php?idx=307&simg=/content/image/2021/11/04/20211104000083_0.jpg"
+      />
+      <img
+        class="img-thumbnail"
+        src="https://cdn.imweb.me/thumbnail/20210214/35db643b3a018.jpg"
+      />
+    </div>
+
+    <script>
+      const cup = document.querySelector("#cup");
+      const thumbnailList = document.querySelectorAll(".img-thumbnail");
+      for (let i = 0; i < thumbnailList.length; i++) {
+        thumbnailList[i].onclick = changePic;
+      }
+      //문서에서 class img-thumbnail이라는 애들을 thumbnailList에 담음
+      function displaySrc() {
+        // const cup = document.querySelector("#cup");
+        alert("이미지 소스: " + cup.getAttribute("src"));
+      }
+      function changePic() {
+        // const cup = document.querySelector("#cup");
+        //책 코드에서는 함수 내에 cup 선언이 없었음 >> 위에서 가져옴
+        const newPic = this.src;
+        // this = changrPic 을 가리킴.
+
+        cup.setAttribute("src", newPic);
+      }
+
+      //   const cup = document.querySelector("#cup");
+      cup.onclick = function (event) {
+        console.log(`이벤트 유형: ${event.type}`);
+        console.log(`이벤트 발생 위치: ${event.pageX}, ${event.pageY}`); //event type 이러쿵 저러쿵 쭐여쓰는거 = 비구조화 할당 함 읽어보기
+        console.log(event);
+      };
+      // event함수 만들어서 evnet정보 가져오기
+      // event는 객체고 event type. pageX. pageY 이런것들은 event객체의 property
+    </script>
+  </body>
+</html>

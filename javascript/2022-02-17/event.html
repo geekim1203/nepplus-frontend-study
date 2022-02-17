@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img
+      src="https://media.wired.com/photos/593261cab8eb31692072f129/master/pass/85120553.jpg"
+      id="cover"
+    />
+  </body>
+
+  <script>
+    const cover = document.getElementById("cover"); //id 선택자 사용한 부분 가져오기
+    cover.addEventListener("mouseover", changePic); //이벤트리스너 메소드 사용 마우스오버됬을 때는 change Pic
+    cover.addEventListener("mouseout", originPic); //이벤트리스너 메소드 사용 마우스 아웃 됬을 때는 originPic
+
+    function changePic() {
+      cover.src =
+        "https://cms.bbcearth.com//sites/default/files/2021-07/Chonky-Animals-2-Quiz.jpg";
+      cover.style.borderRadius = "50%";
+    }
+    // 마우스 오버됬을때 보이는 changePic 함수를 만들었는데 마우스 오버 됫을때는 새로운 이미지가 나오니까 다른 src주소를 함수안에 입력
+    function originPic() {
+      cover.src =
+        "https://media.wired.com/photos/593261cab8eb31692072f129/master/pass/85120553.jpg";
+      cover.style.borderRadius = "";
+    }
+    //마우스 아웃일 때는 다시 원래 기존 이미지가 나와야 하니까 위에 적용해놓은 src
+
+    //addeventListener 사용하면 같은 event에 다른 함수를 넣을 수 있음
+    //하지만 onclick은 불가함.
+  </script>
+</html>

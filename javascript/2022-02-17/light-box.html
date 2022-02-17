@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #lightbox {
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+      #lightboxImage {
+        border: 5px solid #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .row {
+        width: 1000px;
+        margin: 20px auto;
+      }
+      ul {
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: repeat(3, 300px);
+        grid-gap: 20px;
+      }
+
+      ul li img {
+        width: 300px;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <ul>
+        <li>
+          <img
+            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/057c7d1c-e608-4b8e-9479-9ba22a6eb25e/dea6ry4-9f0668bb-1898-4b6c-92ab-77873febb891.jpg/v1/fill/w_1095,h_730,q_70,strp/chonky_panda_has_a_message_for_you____by_bobzeepotato_dea6ry4-pre.jpg"
+            class="pic"
+            data-src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/057c7d1c-e608-4b8e-9479-9ba22a6eb25e/dea6ry4-9f0668bb-1898-4b6c-92ab-77873febb891.jpg/v1/fill/w_1095,h_730,q_70,strp/chonky_panda_has_a_message_for_you____by_bobzeepotato_dea6ry4-pre.jpg"
+          />
+        </li>
+        <li>
+          <img
+            src="https://developer.ridgerun.com/wiki/images/8/80/Egyptian_cat.jpg"
+            class="pic"
+            data-src="https://developer.ridgerun.com/wiki/images/8/80/Egyptian_cat.jpg"
+          />
+        </li>
+        <li>
+          <img
+            src="https://cdn.vox-cdn.com/thumbor/6S34LwI4uPFuoCwOSX365nfJf_0=/0x0:3504x2336/1400x1050/filters:focal(1236x1025:1796x1585):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/65816344/pig_GettyImages_131967915.0.jpg"
+            class="pic"
+            data-src="https://cdn.vox-cdn.com/thumbor/6S34LwI4uPFuoCwOSX365nfJf_0=/0x0:3504x2336/1400x1050/filters:focal(1236x1025:1796x1585):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/65816344/pig_GettyImages_131967915.0.jpg"
+          />
+        </li>
+        <li>
+          <img
+            src="https://media.baamboozle.com/uploads/images/115205/1603397235_252593"
+            class="pic"
+            data-src="https://media.baamboozle.com/uploads/images/115205/1603397235_252593"
+          />
+        </li>
+        <li>
+          <img
+            src="https://dkt6rvnu67rqj.cloudfront.net/sites/default/files/styles/322x405/public/media/int_files/1013320-elephant-tanzania.jpg?h=e6409126&itok=13ikBq1Q"
+            class="pic"
+            data-src="https://dkt6rvnu67rqj.cloudfront.net/sites/default/files/styles/322x405/public/media/int_files/1013320-elephant-tanzania.jpg?h=e6409126&itok=13ikBq1Q"
+          />
+        </li>
+        <li>
+          <img
+            src="https://www.timeoutdubai.com/cloud/timeoutdubai/2021/09/12/CVgukL2V-things-to-do-1200x800.jpg"
+            class="pic"
+            data-src="https://www.timeoutdubai.com/cloud/timeoutdubai/2021/09/12/CVgukL2V-things-to-do-1200x800.jpg"
+          />
+        </li>
+      </ul>
+    </div>
+    <div id="lightbox">
+      <img
+        src="https://dkt6rvnu67rqj.cloudfront.net/sites/default/files/styles/322x405/public/media/int_files/1013320-elephant-tanzania.jpg?h=e6409126&itok=13ikBq1Q"
+        alt=""
+        id="lightboxImage"
+      />
+    </div>
+
+    <script>
+      const pics = document.getElementsByClassName("pic"); //변수명 pics에 class pic 값을 할당함
+      const lightbox = document.getElementById("lightbox"); // 변수명 lightbox에 id lightbox를 할당함
+      const lightboxImage = document.getElementById("lightboxImage"); // 변수명 lightboxImage에 id lightboxImage를 할당함
+
+      for (i = 0; i < pics.length; i++) {
+        pics[i].addEventListener("click", showLightbox);
+      } // Pics를 전부 한 번씩 도는 for문을 생성 , pics는 위에서 선언하기를 pic이라는 클라스였음 class pic은 6개의 li속 6개의 img가 있으니 이걸 다 돌때까지 for문을 실행해라
+      // 실행하고 나면 거기다가 클릭하면 showlight box가 나오는 eventListener를 실핼해라
+
+      function showLightbox() {
+        //바로 위에서 말한 showLightbox 함수
+        const bigLocation = this.getAttribute("data-src"); //bigLocation 이라는 변수에 this를 이용해 showLightbox 함수안에 big location에 data-src라는 속성을 할당하고
+        lightboxImage.setAttribute("src", bigLocation); // 속성값을 수정
+        lightbox.style.display = "block"; // 스타일 지정
+      }
+
+      lightbox.onclick = function () {
+        lightbox.style.display = "none";
+      };
+    </script>
+  </body>
+</html>
